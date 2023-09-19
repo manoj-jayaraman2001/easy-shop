@@ -1,0 +1,62 @@
+@import "../../utils.scss";
+
+.footer {
+  padding: 100px 200px 20px 200px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 100px;
+  font-family: $secondary-font;
+  span {
+    font-size: 13.5px;
+    line-height: 18px;
+  }
+  h2 {
+    font-size: 20px;
+    color: $primary-color;
+  }
+  .left {
+    display: flex;
+    gap: 50px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+  .right {
+    display: flex;
+    gap: 50px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo-div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: $primary-font;
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: $primary-color;
+      font-family: $logo-font;
+    }
+
+  }
+
+  .footer-img{
+    height: 100px;
+  }
+}
+
