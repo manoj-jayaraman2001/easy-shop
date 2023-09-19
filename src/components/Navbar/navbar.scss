@@ -1,0 +1,101 @@
+@import "../../utils.scss";
+.navbar {
+  position: relative;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgb(221, 221, 221);
+  .logo {
+    font-family: $logo-font;
+    color: $primary-color;
+  }
+
+  .menu-icon {
+    margin-left: auto;
+    cursor: pointer;
+    color: $primary-color;
+  }
+
+  .desktop-view-left {
+    display: none;
+  }
+  .desktop-view-right {
+    display: none;
+  }
+}
+
+//  mobile view
+.mobile-menu-options {
+  position: absolute;
+  width: 225px;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  box-shadow: $box-shadow;
+  z-index: 1;
+  height: 100vh;
+  padding: 20px;
+  font-family: $primary-font;
+  .icon-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: fit-content;
+  }
+}
+.cart-icon {
+  position: relative;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: $secondary-color;
+  color: white;
+  border-radius: 50%;
+  padding: 1px 5px;
+  font-size: 13.5px;
+}
+
+.active {
+  display: flex;
+}
+
+.close {
+  display: none;
+}
+
+//  desktop view
+@media (min-width: 1024px) {
+  .mobile-menu-options {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .drop-down {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .menu-icon {
+      display: none;
+    }
+    .desktop-view-left {
+      display: flex;
+      gap: 20px;
+      font-family: $primary-font;
+    }
+    .desktop-view-right {
+      display: flex;
+      gap: 20px;
+      font-family: $primary-font;
+    }
+  }
+}
