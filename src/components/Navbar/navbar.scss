@@ -69,6 +69,13 @@
   display: none;
 }
 
+// icon styles
+.icon{
+  color: $primary-color;
+  font-size: 26;
+  cursor: pointer;
+}
+
 //  desktop view
 @media (min-width: 1024px) {
   .mobile-menu-options {

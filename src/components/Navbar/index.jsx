@@ -11,17 +11,14 @@ import { useEffect, useState } from "react";
 import "./navbar.scss";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const iconStyle = {
-    fontSize: 24,
-  };
 
   return (
     <div className="navbar">
       <div className="desktop-view-left">
-      {/* --------------- Languages -------------- */}
+        {/* --------------- Languages -------------- */}
         <div className="drop-down">
           <label htmlFor="language" style={{ fontSize: 12 }}>
-            Language
+            Lang
           </label>
           <select name="language" id="language">
             <option value="english" defaultValue>
@@ -56,28 +53,28 @@ const Navbar = () => {
         <NavLink>Stores</NavLink>
         {/* -------- Account Options -------- */}
         <div className="cart-icon">
-          <ShoppingCartOutlined style={iconStyle} />
+          <ShoppingCartOutlined className="icon" />
           <span className="cart-item-count">0</span>
         </div>
         <div>
-          <FavoriteBorder style={iconStyle} />
+          <FavoriteBorder className="icon" />
         </div>
         <div>
-          <AccountCircleOutlined style={iconStyle} />
+          <AccountCircleOutlined className="icon" />
         </div>
       </div>
 
       <div className="menu-icon" onClick={() => setMenuOpen((prev) => !prev)}>
         {menuOpen ? (
-          <CloseOutlined style={iconStyle} />
+          <CloseOutlined className="icon" />
         ) : (
-          <MenuOpenOutlined style={iconStyle} />
+          <MenuOpenOutlined className="icon" />
         )}
       </div>
 
       {/*------------------ menu for mobile view ------------------------ */}
       <div className={`mobile-menu-options ${menuOpen ? "active" : "close"}`}>
-          {/* -------pages--------- */}
+        {/* -------pages--------- */}
         <NavLink>Home</NavLink>
         <NavLink>About</NavLink>
         <NavLink>Contact</NavLink>
@@ -85,17 +82,17 @@ const Navbar = () => {
         {/* ------------ Account related ---------- */}
         <NavLink className="icon-option">
           <div className="cart-icon">
-            <ShoppingCartOutlined style={iconStyle} />
+            <ShoppingCartOutlined className="icon" />
             <span className="cart-item-count">0</span>
           </div>
           <span>Cart</span>
         </NavLink>
         <NavLink className="icon-option">
-          <FavoriteBorder style={iconStyle} />
+          <FavoriteBorder className="icon" />
           <span>Favorites</span>
         </NavLink>
         <NavLink className="icon-option">
-          <AccountCircleOutlined style={iconStyle} />
+          <AccountCircleOutlined className="icon" />
           <span>My Profile</span>
         </NavLink>
         <div style={{ borderBottom: "1px solid lightgray" }}></div>

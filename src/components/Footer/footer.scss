@@ -2,12 +2,14 @@
 
 .footer {
   padding: 100px 200px 20px 200px;
+  background-color: whitesmoke;
 }
 
 .wrapper {
   display: flex;
   gap: 100px;
   font-family: $secondary-font;
+  flex: 1;
   span {
     font-size: 13.5px;
     line-height: 18px;
@@ -52,11 +54,38 @@
       color: $primary-color;
       font-family: $logo-font;
     }
-
   }
 
-  .footer-img{
+  .footer-img {
     height: 100px;
   }
 }
 
+@media (max-width: 736px) {
+  .wrapper {
+    flex-direction: column;
+
+    .left {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 868px) {
+  .right {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    padding: 50px;
+  }
+  .left {
+    flex-direction: column;
+  }
+  .bottom {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+}
